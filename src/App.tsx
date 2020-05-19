@@ -1,33 +1,25 @@
-import React, { useState } from "react"
+import React from "react"
+import Main from "./pages/Main"
+import Navigation from "./components/Navigation"
+import Slider from "./components/Slider"
 import styled from "styled-components"
 
-const View = styled.div`
-    padding: 4em;
-    background: papayawhip;
-`
-const Title = styled.h1`
-    font-size: 1.5em;
-    text-align: center;
-    color: palevioletred;
-`
-const Button = styled.button`
-    border: none;
-    background: blue;
-    color: "#fff";
-    padding: 0.4rem 1rem;
-    cursor: pointer;
+const Container = styled.div`
+    display: grid;
+    grid-template-columns: 200px 11fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "nav main"
+        "nav aside";
 `
 
-const App = () => {
-    const [saudation, setSaudation] = useState("é inicial")
-
-    const change = () => setSaudation("Mudou")
-
+const App: React.FC = () => {
     return (
-        <View>
-            <Title>Meu estado {saudation}</Title>
-            <Button onClick={change}>Trocar</Button>
-        </View>
+        <Container>
+            <Navigation />
+            <Main />
+            <Slider />
+        </Container>
     )
 }
 export default App
