@@ -4,7 +4,7 @@ import backgroudImage from "../../assets/images/bg.jpg"
 export const Container = styled.main`
     grid-area: main;
     height: 70vh;
-    padding: 4em;
+    padding: 4em 10rem;
     background-image: url(${backgroudImage});
     background-repeat: no-repeat;
     background-size: 100% 100%;
