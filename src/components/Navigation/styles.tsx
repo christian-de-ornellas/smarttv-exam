@@ -26,9 +26,7 @@ export const Nav = styled.ul`
 
 export const Item = styled.li`
     color: #fff;
-    padding: 0.2rem;
     display: flex;
     align-items: center;
     padding: 1rem;
-    padding-right: 0.5rem;
 `

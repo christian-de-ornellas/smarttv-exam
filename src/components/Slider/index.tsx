@@ -1,16 +1,24 @@
 import React from "react"
-
-import { Container, Item } from "./styles"
+import { Container, Item, Place } from "./styles"
 
 const Slider: React.FC = () => {
     return (
         <Container>
-            <Item>Item 01</Item>
-            <Item>Item 02</Item>
-            <Item>Item 03</Item>
-            <Item>Item 04</Item>
-            <Item>Item 05</Item>
-            <Item>Item 06</Item>
+            <Item>
+                <Place>Sala de Estar</Place>
+            </Item>
+            <Item>
+                <Place>Varanda</Place>
+            </Item>
+            <Item>
+                <Place>Piscina</Place>
+            </Item>
+            <Item>
+                <Place>Academia</Place>
+            </Item>
+            <Item>
+                <Place>Chuveiro</Place>
+            </Item>
         </Container>
     )
 }

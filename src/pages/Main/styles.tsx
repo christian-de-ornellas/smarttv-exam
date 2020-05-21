@@ -2,7 +2,6 @@ import styled from "styled-components"
 import backgroudImage from "../../assets/images/bg.jpg"
 
 export const Container = styled.main`
-    grid-area: main;
     height: 70vh;
     padding: 4em 10rem;
     background-image: url(${backgroudImage});
