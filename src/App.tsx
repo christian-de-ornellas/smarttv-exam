@@ -1,22 +1,20 @@
-import React from "react"
+import React, { useState } from "react"
 import Main from "./pages/Main"
 import Navigation from "./components/Navigation"
 import Slider from "./components/Slider"
-import styled from "styled-components"
-
-const Container = styled.div`
-    display: grid;
-    grid-template-columns: 200px 11fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "nav main"
-        "nav aside";
-`
+import { Container } from "./styles"
 
 const App: React.FC = () => {
+    const [showMenu, setShowMenu] = useState(false)
+
+    const handleEnterMenu = () => setShowMenu(false)
+    const handleLeaveMenu = () => setShowMenu(true)
+
     return (
         <Container>
-            <Navigation />
+            <div onMouseEnter={handleEnterMenu} onMouseLeave={handleLeaveMenu}>
+                <Navigation show={showMenu} />
+            </div>
             <Main />
             <Slider />
         </Container>
