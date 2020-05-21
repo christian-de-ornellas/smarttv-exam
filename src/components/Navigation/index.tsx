@@ -8,7 +8,7 @@ interface Props {
 
 const Navigation = (props: Props) => {
     const { show } = props
-    if (show === false) {
+    if (show === true) {
         Navbar.defaultProps = {
             theme: { showMenu: "250px" },
         }

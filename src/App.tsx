@@ -7,8 +7,8 @@ import { Container } from "./styles"
 const App: React.FC = () => {
     const [showMenu, setShowMenu] = useState(false)
 
-    const handleEnterMenu = () => setShowMenu(false)
-    const handleLeaveMenu = () => setShowMenu(true)
+    const handleEnterMenu = () => setShowMenu(true)
+    const handleLeaveMenu = () => setShowMenu(false)
 
     return (
         <Container>
