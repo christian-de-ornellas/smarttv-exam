@@ -10,7 +10,7 @@ const App: React.FC = () => {
     const handleEnterMenu = () => setShowMenu(true)
     const handleLeaveMenu = () => setShowMenu(false)
 
-    const useKey = (key: any, cb: any) => {
+    const useKey = (key: string, cb: any) => {
         const callbackRef = useRef(cb)
         useEffect(() => {
             callbackRef.current = cb
